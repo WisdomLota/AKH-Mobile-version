@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            font-family: 'Roboto Flex', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .big {
+            margin: 8px 16px;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .tit {
+            margin-top: 88px;
+        }
+
+        .tit h2 {
+            font-size: 24px;
+            color: #822E27;
+        }
+
+        .cont {
+            padding: 12px 32px
+        }
+
+        .cont p {
+            font-size: 16px;
+            color: #822E27;
+        }
+
+        .cont button {
+            font-size: 16px;
+            border-radius: 0px;
+            padding: 8px 8px;
+            color: #6CA2E3;
+            border: 2px solid #6CA2E3;
+            background-color: #fbfbfb;
+        }
+
+        .cont button:hover {
+            color: #fbfbfb;
+            background-color: #6CA2E3;
+        }
+
+        #edit-btn {
+            float: right;
+        }
+
+        ul {
+            list-style-type: none; /* Remove default bullets */
+            color: #822E27;
+        }
+
+        ul li::before {
+          content: '\2022'; /* Unicode character for a filled circle */
+          color: #822E27;
+          display: inline-block;
+          width: 1em;
+          margin-left: -2em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="big">
+        <div class="inner-1">
+            <div class="tit">
+                <h2>Home Owner's Personal Information</h2>
+            </div>
+            <div class="cont">
+                <p><b>Last Name: </b>Aliyu</p>
+                <p><b>First Name: </b>Alhassan</p>
+                <p><b>DOB: </b>April 23 2005</p>
+                <p><b>Email: </b>adamusemail@gmail.com</p>
+                <p><b>Mobile Number: </b>09123375464</p>
+                <p><b>Whatsapp Number: </b>+234 9123375464</p>
+                <p><b>Residential Address: </b>No 4 minmani island <br> street Kachia Meduguri Nigeria</p>
+                <p><b>Gender: </b>Male</p>
+                <button id="edit-btn">EDIT</button>
+            </div>
+        </div>
+        <div class="inner-2">
+            <div class="tit">
+                <h2>Home Owner's Realty Information</h2>
+            </div>
+            <div class="cont">
+                <p><b>Number of Home(s) Owned: </b>[3]</p>
+                <p><b>List of Home(s) Owned: </b></p>
+                <ul>
+                    <li>4 Bedroom Terrace House 1a</li>
+                </ul>
+                <button>GET DOCUMENT OF OWNERSHIP</button>
+                <ul>
+                    <li>4 Bedroom Terrace House 2a</li>
+                </ul>
+                <button>GET DOCUMENT OF OWNERSHIP</button>
+                <ul>
+                    <li>4 Bedroom Terrace House 2c</li>
+                </ul>
+                <button>GET DOCUMENT OF OWNERSHIP</button>
+                <p><b>Number of Home(s) Claimed: </b>[3]</p>
+                <p><b>List of Home(s) Claimed: </b></p>
+                <ul>
+                    <li>4 Bedroom Terrace House 1a</li>
+                    <ul>
+                        <li>Price: ₦180 000 000</li>
+                    </ul>
+                </ul>
+                <ul>
+                    <li>4 Bedroom Terrace House 2a</li>
+                    <ul>
+                        <li>Price: ₦180 000 000</li>
+                    </ul>
+                </ul>
+                <p><b>Total Cost of Home(s): </b></p>
+                <ul>
+                    <li>Price: ₦360 000 000</li>
+                </ul>
+                <p><b>Pending Installmental Payment: </b></p>
+                <ul>
+                    <li>4 Bedroom Terrace House 2c</li>
+                    <ul>
+                        <li>Price: ₦180 000 000</li>
+                        <li>Amount to be paid: ₦70 000 000</li>
+                    </ul>
+                </ul>
+                <button>COMPLETE PAYMENT</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

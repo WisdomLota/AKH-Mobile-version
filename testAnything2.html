@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Hide the default checkbox */
+.checkbox-container input {
+  display: none;
+}
+
+/* Style the custom checkbox */
+.checkbox-container .checkmark {
+  display: inline-block;
+  width: 20px; /* Set the size of the checkbox */
+  height: 20px; /* Set the size of the checkbox */
+ /* Set the background color of the checkbox */
+  border: 1px solid #007bff; /* Set the border color of the checkbox */
+  border-radius: 3px; /* Optional: Round the corners of the checkbox */
+  margin-right: 10px; /* Add some space between the checkbox and the text */
+}
+
+/* Style the custom checkbox when checked */
+.checkbox-container input:checked + .checkmark {
+  background-color: #007bff; /* Set the background color when checked */
+}
+
+/* Style the text next to the checkbox */
+.checkbox-container .terms-text {
+  font-size: 14px; /* Set the font size of the text */
+  color: #333; /* Set the color of the text */
+}
+
+    </style>
+</head>
+<body>
+    <label class="checkbox-container">
+        <input type="checkbox" id="accept-terms" name="accept-terms">
+        <span class="checkmark"></span>
+        <span class="terms-text">I accept the terms and conditions</span>
+      </label>
+      
+</body>
+</html>

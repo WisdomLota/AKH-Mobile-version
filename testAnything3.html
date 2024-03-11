@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Style the form container */
+#registration-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Style form group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Style labels */
+label {
+  display: block;
+  font-weight: bold;
+}
+
+/* Style text inputs and textareas */
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the password input container */
+.password-input {
+  position: relative;
+}
+
+/* Style the eye symbol for password visibility */
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* Style the upload symbol and text */
+.upload-symbol {
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.upload-text {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Change button color on hover */
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <form id="registration-form">
+        <div class="form-group">
+          <label for="last-name">Last Name:</label>
+          <input type="text" id="last-name" name="last-name" required>
+        </div>
+      
+        <div class="form-group">
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" name="first-name" required>
+        </div>
+      
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <div class="password-input">
+            <input type="password" id="password" name="password" required>
+            <span class="toggle-password" onclick="togglePasswordVisibility()">&#128065;</span>
+          </div>
+        </div>
+      
+        <div class="form-group">
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+      
+        <div class="form-group">
+          <label for="address">Residential Address:</label>
+          <textarea id="address" name="address" rows="4" required></textarea>
+        </div>
+      
+        <div class="form-group">
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+      
+        <div class="form-group">
+          <label for="security-question">Security Question:</label>
+          <select id="security-question" name="security-question" required>
+            <option value="">Select Security Question</option>
+            <option value="pet">What is the name of your first pet?</option>
+            <option value="school">What is the name of your primary school?</option>
+            <option value="city">What city were you born in?</option>
+          </select>
+        </div>
+      
+        <div class="form-group">
+          <label for="id-image">ID Card Image:</label>
+          <input type="file" id="id-image" name="id-image" accept="image/*" required>
+          <span class="upload-symbol">&#8686;</span>
+          <span class="upload-text">Upload one of your identification documents</span>
+        </div>
+      
+        <div class="form-group">
+          <input type="checkbox" id="accept-terms" name="accept-terms" required>
+          <label for="accept-terms">I accept the terms and conditions</label>
+        </div>
+      
+        <button type="submit">Submit</button>
+      </form>
+      
+
+<script>
+    function togglePasswordVisibility() {
+  var passwordInput = document.getElementById("password");
+  var toggleIcon = document.querySelector(".toggle-password");
+
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    toggleIcon.textContent = "\u{1F441}";
+  } else {
+    passwordInput.type = "password";
+    toggleIcon.textContent = "\u{1F441}\u{FE0E}";
+  }
+}
+
+</script>
+</body>
+</html>

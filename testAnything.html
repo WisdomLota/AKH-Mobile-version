@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .password-input {
+            position: relative;
+        }
+
+        .password-input .toggle-password {
+          position: absolute;
+          top: 0;
+          right: 10px;
+          cursor: pointer;
+        }
+
+        .upload-symbol {
+          font-size: 24px;
+          margin-left: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="registration-form">
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+      
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+      
+        <label for="password">Password:</label>
+        <div class="password-input">
+          <input type="password" id="password" name="password" required>
+          <span class="toggle-password" onclick="togglePasswordVisibility()">&#128065;</span>
+        </div>
+      
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      
+        <label for="address">Residential Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+      
+        <label for="security-question">Security Question:</label>
+        <select id="security-question" name="security-question" required>
+          <option value="">Select Security Question</option>
+          <option value="pet">What is the name of your first pet?</option>
+          <option value="school">What is the name of your primary school?</option>
+          <option value="city">What city were you born in?</option>
+        </select>
+      
+        <label for="id-image">ID Card Image:</label>
+        <input type="file" id="id-image" name="id-image" accept="image/*" required>
+        <span class="upload-symbol">&#8686;</span>
+      
+        <input type="checkbox" id="accept-terms" name="accept-terms" required>
+        <label for="accept-terms">I accept the terms and conditions</label>
+      
+        <button type="submit">Submit</button>
+      </form>
+      
+    
+
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            var toggleIcon = document.querySelector(".toggle-password");
+
+            if (passwordInput.type === "password") {
+              passwordInput.type = "text";
+              toggleIcon.textContent = "\u{1F441}";
+            } else {
+              passwordInput.type = "password";
+              toggleIcon.textContent = "\u{1F441}\u{FE0E}";
+            }
+        }
+
+    </script>
+</body>
+</html>
+
+

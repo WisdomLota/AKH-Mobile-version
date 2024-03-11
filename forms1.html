@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            padding: 0px;
+            margin: 0px;
+            font-family: 'Roboto Flex', sans-serif;
+            overflow-x: hidden;
+        }
+
+        #reg-form {
+        max-width: 500px;
+        margin: auto;
+        font-family: 'Roboto Flex', sans-serif;
+        }
+
+        /* Style form group */
+        .form-group {
+          margin-bottom: 32px;
+          color: #822e27;
+        }
+
+        /* Style labels */
+        label {
+          display: block;
+          font-weight: bold;
+        }
+
+        /* Style text inputs and textareas */
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        textarea,
+        select {
+          width: 100%;
+          margin-top: 16px;
+          padding: 10px;
+          border: 1px solid #822e27;
+          color: #822e27;
+        }
+
+        /* Style the password input container */
+        .password-input {
+          position: relative;
+        }
+
+        /* Style the eye symbol for password visibility */
+        .make-visible {
+          position: absolute;
+          top: 60%;
+          right: 8px;
+          transform: translateY(-40%);
+          cursor: pointer;
+        }
+
+
+
+        #id-image {
+            display: none;
+        }
+
+        .custom-id-image {
+            display: inline-block;
+            padding: 16px 12px;
+            background-color: #fbfbfb;
+            color: #822e27;
+            border: 1px solid #822e27;
+            cursor: pointer;
+            width: 80%;
+        }
+
+        .upload-symbol {
+            font-size: 32px;
+            margin-left: 50%;
+        }
+
+        .upload-text {
+          display: block;
+          margin-top: 5px;
+          font-size: 14px;
+          color: #822e27;
+          text-align: center;
+          font-weight: 500;
+        }
+
+        #security-question option {
+            color: #822e27;
+        }
+
+        .accept-terms input{
+            display: none;
+        }
+
+        .accept-terms .check-mark {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 1px solid #822e27;
+            margin-top: 24px;
+        }
+
+        .accept-terms input:checked +.check-mark {
+            background-color: #822e27;
+        }
+
+        .accept-terms .terms-text {
+            font-size: 16px;
+            color: #822e27;
+            float: right;
+            margin-right: 164px;
+        }
+
+        .terms-text b{
+            color: #6CA2E3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form action="" id="reg-form">
+        <div class="form-group">
+            <label for="last-name">Last Name: </label>
+            <input type="text" name="last-name" id="last-name" required>
+        </div>
+        <div class="form-group">
+            <label for="first-name">First Name: </label>
+            <input type="text" name="first-name" id="first-name" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password: </label>
+            <div class="password-input">
+                <input type="password" id="password" name="password" required>
+                <span class="make-visible" onclick="togglePasswordVisibility()">&#128065;</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth: </label>
+            <input type="date" name="dob" id="dob" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Residential Address: </label>
+            <textarea name="address" id="address" cols="30" rows="5" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="security-question">Security Question: </label>
+            <select name="security-question" id="security-question" required>
+                <option value="">Select a Security Question</option>
+                <option value="pet">What is the name of your first pet?</option>
+                <option value="school">What is the name of your primary school?</option>
+                <option value="city">What city were you born in?</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="id-image">ID Card Image: </label>
+            <div class="id-talk">
+                <div class="image-symbol">
+                    <input type="file" id="id-image" name="id-image" accept="image*/" required><br>
+                    <label for="id-image" class="custom-id-image">
+                        <span class="upload-symbol">&#8686;</span>
+                        <span class="upload-text">Upload the image of a valid ID Card (this can<br> be a passport, drivers license, NIN, National ID card)</span>
+                        <span class="upload-text"><b>Maximum size of 2MB</b></span>
+                    </label>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="accept-terms" class="accept-terms">
+                <input type="checkbox" id="accept-terms" name="accept-terms" required>
+                <span class="check-mark"></span> 
+                <span class="terms-text">By checking this box you accept all of<br>
+                our terms and conditions and privacy<br>
+                policy (Please read the <b>terms and <br>conditions</b> and <b>privacy policy</b> before <br>checking the box)</span>
+            </label>
+        </div>
+    </form>
+
+    
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            var toggleIcon = document.querySelector(".make-visible");
+
+            if (passwordInput.type === "password") {
+              passwordInput.type = "text";
+              toggleIcon.textContent = "\u{1F441}";
+            } else {
+              passwordInput.type = "password";
+              toggleIcon.textContent = "\u{1F441}\u{FE0E}";
+            }
+        }
+
+    </script>
+</body>
+</html>
